@@ -2,12 +2,25 @@
 
 This repository contains Python scripts to extract the titles or URLs of all open tabs of a running Firefox browser. It uses `xdotool` to perform window actions and `pyautogui` to simulate input.
 
-## Funktionen
+## Functions
 
 - **Get tab titles**: A script collects the titles of all open tabs in Firefox.
 - **Get tab URLs**: Another script copies the URLs of the open tabs from the address bar.
 
-## Voraussetzungen
+### Descriptions
+
+| Program Name                           | Description                                                                                                      |
+|----------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| `fetch_and_close_tab_title_google.py`  | Loops through open tabs, searches for a tab with "Google" in the title, and closes the tab if found.             |
+| `fetch_and_close_tab_url_google.py`    | Loops through open tabs, searches for a tab with a URL starting with "https://www.google.de/" and closes the tab if found. |
+| `fetch_and_search_tab_title_google.py` | Loops through open tabs, searches for a tab with "Google" in the title, and performs a Google search for "bitcoin price" in that tab if found. |
+| `fetch_and_search_tab_url_google.py`   | Loops through open tabs, searches for a tab with a URL starting with "https://www.google.de/", and performs a Google search for "bitcoin price" in that tab if found. |
+| `fetch_tab_title_google.py`            | Loops through open tabs, searches for a tab with "Google" in the title, and returns the title of the found tab. |
+| `fetch_tab_titles.py`                  | Loops through all open tabs and returns the titles of the tabs.                                                   |
+| `fetch_tab_url_google.py`              | Loops through open tabs, searches for a tab with a URL starting with "https://www.google.de/", and returns the URL of the found tab. |
+| `fetch_tab_urls.py`                    | Loops through all open tabs and returns the URLs of the tabs.                                                   |
+
+## Prerequisites/Requirements
 
 - **Python** 3.x
 - **Dependecies**:
