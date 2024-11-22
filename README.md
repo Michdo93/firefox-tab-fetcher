@@ -24,8 +24,9 @@ This repository contains Python scripts to extract the titles or URLs of all ope
 
 - **Python** 3.x
 - **Dependecies**:
-  - `xdotool` (Install with `sudo apt install xdotool`)
-  - `pyautogui` (Install with `pip install pyautogui`)
+  - `xdotool` (install with `sudo apt install xdotool`)
+  - `pyautogui` (install with `pip install pyautogui`)
+  - `pyperclip` (install with `pip install pyperclip`)
 
 ## Installation
 
