@@ -1,2 +1,66 @@
-# firefox-tab-fetcher
-Python scripts to use window management tools like xdotool to extract the titles or URLs of open Firefox tabs.
+# Firefox Tab Fetcher
+
+This repository contains Python scripts to extract the titles or URLs of all open tabs of a running Firefox browser. It uses `xdotool` to perform window actions and `pyautogui` to simulate input.
+
+## Funktionen
+
+- **Get tab titles**: A script collects the titles of all open tabs in Firefox.
+- **Get tab URLs**: Another script copies the URLs of the open tabs from the address bar.
+
+## Voraussetzungen
+
+- **Python** 3.x
+- **Dependecies**:
+  - `xdotool` (Install with `sudo apt install xdotool`)
+  - `pyautogui` (Install with `pip install pyautogui`)
+
+## Installation
+
+1. Clone the Repository:
+
+```bash
+git clone https://github.com/dein-benutzername/firefox-tab-fetcher.git
+cd firefox-tab-fetcher
+```
+
+2. Install the Python dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Reading tab titles
+
+Execute the script `fetch_tab_titles.py`:
+
+```
+python fetch_tab_titles.py
+```
+
+### Reading tab URLs
+
+Execute the script `fetch_tab_urls.py`:
+
+```
+python fetch_tab_urls.py
+```
+
+## Hints
+
+    The Firefox window must be minimized when starting the script, as xdotool works better with minimized windows.
+    Tested on Ubuntu with Firefox.
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for more information.
+
+---
+
+```
+### Advantages of the Name and Description
+1. **Clear**: The name `firefox-tab-fetcher` clearly describes the functionality.
+2. **Clarity**: The short description highlights the use of `xdotool` and the goal (fetching tab information).
+3. **Modularity**: With two distinct scripts (Title/URLs), the repository is easy to understand and flexible to use.
+```
