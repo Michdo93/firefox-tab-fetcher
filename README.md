@@ -56,11 +56,3 @@ python fetch_tab_urls.py
 
 MIT License. See [LICENSE](LICENSE) for more information.
 
----
-
-```
-### Advantages of the Name and Description
-1. **Clear**: The name `firefox-tab-fetcher` clearly describes the functionality.
-2. **Clarity**: The short description highlights the use of `xdotool` and the goal (fetching tab information).
-3. **Modularity**: With two distinct scripts (Title/URLs), the repository is easy to understand and flexible to use.
-```
