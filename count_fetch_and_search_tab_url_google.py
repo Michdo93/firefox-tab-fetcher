@@ -34,21 +34,29 @@ def search_google_in_url(url):
     activate_firefox()
     time.sleep(1)
     
-    for _ in range(10):
-        pyautogui.hotkey("ctrl", "l")
+    # Track if we've checked all available tabs
+    tab_checked = set()
+
+    while True:
+        pyautogui.hotkey("ctrl", "l")  # Focus on the address bar
         time.sleep(0.2)
         pyautogui.hotkey("ctrl", "c")
         time.sleep(0.2)
         current_url = pyperclip.paste()
-        
+
+        # If the tab with the desired URL is found
         if current_url.startswith(url):
             pyautogui.write("bitcoin price")
             pyautogui.press("enter")
             return f"Started search in tab with URL: {current_url}"
+
+        # If this tab has already been checked, stop
+        if current_url in tab_checked:
+            return "No more tabs to check or tab with URL not found."
+
+        tab_checked.add(current_url)
         pyautogui.hotkey('ctrl', 'tab')
         time.sleep(0.5)
-    
-    return "No tab with the URL found."
 
 if __name__ == "__main__":
     print(search_google_in_url("https://www.google.de"))
