@@ -60,8 +60,6 @@ def get_firefox_tab_title_google():
     # If not found, open a new Google tab
     pyautogui.hotkey("ctrl", "t")  # Open a new tab
     time.sleep(0.5)
-    #url="https://www.google.de"
-    #pyautogui.write(url, interval=0.1)  # Write Google URL
     pyautogui.write("https:", interval=0.1)  # Tippt 'https'
     pyautogui.hotkey("shift", "7")  # Tippt '/' (Shift + 7 für '/')
     pyautogui.hotkey("shift", "7")  # Tippt '/' (Shift + 7 für '/')
