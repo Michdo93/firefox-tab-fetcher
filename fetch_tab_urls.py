@@ -2,6 +2,7 @@ import os
 import subprocess
 import pyautogui
 import time
+import pyperclip  # Importiere pyperclip für Zwischenablageoperationen
 
 def minimize_firefox_windows():
     """Minimiert alle geöffneten Firefox-Fenster."""
@@ -50,8 +51,8 @@ def get_firefox_tab_urls():
         pyautogui.hotkey("ctrl", "c")  # Kopiere die URL
         time.sleep(0.2)
 
-        # Hole die URL aus der Zwischenablage
-        url = pyautogui.paste()
+        # Hole die URL aus der Zwischenablage mit pyperclip
+        url = pyperclip.paste()
 
         # Vermeide doppelte URLs und beende die Schleife
         if url in tab_urls:
