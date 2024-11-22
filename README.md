@@ -19,6 +19,8 @@ This repository contains Python scripts to extract the titles or URLs of all ope
 | `fetch_tab_titles.py`                  | Loops through all open tabs and returns the titles of the tabs.                                                   |
 | `fetch_tab_url_google.py`              | Loops through open tabs, searches for a tab with a URL starting with "https://www.google.de/", and returns the URL of the found tab. |
 | `fetch_tab_urls.py`                    | Loops through all open tabs and returns the URLs of the tabs.                                                   |
+| `fetch_and_open_tab_title_google.py`   | Loops through open tabs, searches for a tab with "Google" in the title. If not found, opens a new Google tab.  |
+| `fetch_and_open_tab_url_google.py`     | Loops through open tabs, searches for a tab with a URL starting with "https://www.google.de/". If not found, opens a new Google tab. |
 
 ## Prerequisites/Requirements
 
