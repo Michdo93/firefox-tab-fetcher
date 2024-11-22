@@ -33,19 +33,29 @@ def close_tab_by_title(title):
     activate_firefox()
     time.sleep(1)
     
-    for _ in range(10):
+    # Track if we've checked all available tabs
+    tab_checked = set()
+
+    while True:
         result = subprocess.run(
             ["xdotool", "getactivewindow", "getwindowname"],
             stdout=subprocess.PIPE,
             text=True,
         )
         window_title = result.stdout.strip()
+
+        # If the tab with the desired title is found
         if title in window_title:
             pyautogui.hotkey('ctrl', 'w')  # Close the tab
             return f"Closed tab with title: {window_title}"
+
+        # If this tab has already been checked, stop
+        if window_title in tab_checked:
+            return "No more tabs to check or tab with title not found."
+
+        tab_checked.add(window_title)
         pyautogui.hotkey('ctrl', 'tab')
         time.sleep(0.5)
-    return "No tab with the title found."
 
 if __name__ == "__main__":
     print(close_tab_by_title("Google"))
