@@ -8,19 +8,24 @@ This repository contains Python scripts to extract the titles or URLs of all ope
 - **Get tab URLs**: Another script copies the URLs of the open tabs from the address bar.
 
 ### Descriptions
-
-| Program Name                           | Description                                                                                                      |
-|----------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| `fetch_and_close_tab_title_google.py`  | Loops through open tabs, searches for a tab with "Google" in the title, and closes the tab if found.             |
-| `fetch_and_close_tab_url_google.py`    | Loops through open tabs, searches for a tab with a URL starting with "https://www.google.de/" and closes the tab if found. |
-| `fetch_and_search_tab_title_google.py` | Loops through open tabs, searches for a tab with "Google" in the title, and performs a Google search for "bitcoin price" in that tab if found. |
-| `fetch_and_search_tab_url_google.py`   | Loops through open tabs, searches for a tab with a URL starting with "https://www.google.de/", and performs a Google search for "bitcoin price" in that tab if found. |
-| `fetch_tab_title_google.py`            | Loops through open tabs, searches for a tab with "Google" in the title, and returns the title of the found tab. |
-| `fetch_tab_titles.py`                  | Loops through all open tabs and returns the titles of the tabs.                                                   |
-| `fetch_tab_url_google.py`              | Loops through open tabs, searches for a tab with a URL starting with "https://www.google.de/", and returns the URL of the found tab. |
-| `fetch_tab_urls.py`                    | Loops through all open tabs and returns the URLs of the tabs.                                                   |
-| `fetch_and_open_tab_title_google.py`   | Loops through open tabs, searches for a tab with "Google" in the title. If not found, opens a new Google tab.  |
-| `fetch_and_open_tab_url_google.py`     | Loops through open tabs, searches for a tab with a URL starting with "https://www.google.de/". If not found, opens a new Google tab. |
+| **Filename**                          | **Description**                                                                                     |
+|---------------------------------------|-----------------------------------------------------------------------------------------------------|
+| fetch_and_close_tab_title_google.py   | Loops through open tabs, searches for a tab with "Google" in the title, and closes the tab if found. |
+| fetch_and_close_tab_url_google.py     | Loops through open tabs, searches for a tab with a URL starting with "https://www.google.de/" and closes the tab if found. |
+| fetch_and_search_tab_title_google.py  | Loops through open tabs, searches for a tab with "Google" in the title, and performs a Google search for "bitcoin price" in that tab if found. |
+| fetch_and_search_tab_url_google.py    | Loops through open tabs, searches for a tab with a URL starting with "https://www.google.de/", and performs a Google search for "bitcoin price" in that tab if found. |
+| fetch_tab_title_google.py             | Loops through open tabs, searches for a tab with "Google" in the title, and returns the title of the found tab. |
+| fetch_tab_titles.py                   | Loops through all open tabs and returns the titles of the tabs.                                      |
+| fetch_tab_url_google.py               | Loops through open tabs, searches for a tab with a URL starting with "https://www.google.de/", and returns the URL of the found tab. |
+| fetch_tab_urls.py                     | Loops through all open tabs and returns the URLs of the tabs.                                       |
+| fetch_and_open_tab_title_google.py    | Loops through open tabs, searches for a tab with "Google" in the title. If not found, opens a new Google tab. |
+| fetch_and_open_tab_url_google.py      | Loops through open tabs, searches for a tab with a URL starting with "https://www.google.de/". If not found, opens a new Google tab. |
+| count_fetch_and_close_tab_title_google.py | Counts all tabs, searches for a tab with "Google" in the title, and closes it if found. Stops after checking all tabs without duplication. |
+| count_fetch_and_close_tab_url_google.py   | Counts all tabs, searches for a tab with a URL starting with "https://www.google.de/", and closes it if found. Stops after checking all tabs without duplication. |
+| count_fetch_and_search_tab_title_google.py | Counts all tabs, searches for a tab with "Google" in the title, and performs a Google search for "bitcoin price" in that tab if found. Stops after checking all tabs without duplication. |
+| count_fetch_and_search_tab_url_google.py   | Counts all tabs, searches for a tab with a URL starting with "https://www.google.de/", and performs a Google search for "bitcoin price" in that tab if found. Stops after checking all tabs without duplication. |
+| count_fetch_and_open_tab_title_google.py   | Counts all tabs, searches for a tab with "Google" in the title. If not found, opens a new Google tab. Stops after checking all tabs without duplication. |
+| count_fetch_and_open_tab_url_google.py     | Counts all tabs, searches for a tab with a URL starting with "https://www.google.de/". If not found, opens a new Google tab. Stops after checking all tabs without duplication. |
 
 ## Prerequisites/Requirements
 
