@@ -67,8 +67,11 @@ def fetch_and_open_tab_by_title(title, url="https://www.google.de"):
         # Open a new tab and go to the specified URL
         pyautogui.hotkey('ctrl', 't')
         time.sleep(1)
-        pyautogui.write(url, interval=0.1)
-        pyautogui.press('enter')
+        pyautogui.write("https:", interval=0.1)  # Tippt 'https'
+        pyautogui.hotkey("shift", "7")  # Tippt '/' (Shift + 7 für '/')
+        pyautogui.hotkey("shift", "7")  # Tippt '/' (Shift + 7 für '/')
+        pyautogui.write("www.google.de", interval=0.1)  # Tippt die restliche URL
+        pyautogui.press("enter")  # Press Enter to load Google
 
 if __name__ == "__main__":
     title_keyword = "Google"
