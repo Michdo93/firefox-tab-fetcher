@@ -1,8 +1,10 @@
 import os
 import subprocess
+import pyautogui
 import time
 
 def minimize_firefox_windows():
+    """Minimize all Firefox windows."""
     result = subprocess.run(
         ["xdotool", "search", "--class", "firefox"],
         stdout=subprocess.PIPE,
@@ -15,6 +17,7 @@ def minimize_firefox_windows():
         os.system(f"xdotool windowminimize {window_id}")
 
 def activate_firefox():
+    """Activate the first Firefox window."""
     result = subprocess.run(
         ["xdotool", "search", "--class", "firefox"],
         stdout=subprocess.PIPE,
@@ -27,7 +30,8 @@ def activate_firefox():
     os.system(f"xdotool windowactivate {window_ids[0]}")
     time.sleep(0.5)
 
-def fetch_tab_by_title(title):
+def fetch_tab_count_by_title(title):
+    """Count tabs with the specified title keyword."""
     minimize_firefox_windows()
     activate_firefox()
     time.sleep(1)
@@ -36,6 +40,7 @@ def fetch_tab_by_title(title):
     tab_count = 0
 
     while True:
+        # Get the title of the active tab
         result = subprocess.run(
             ["xdotool", "getactivewindow", "getwindowname"],
             stdout=subprocess.PIPE,
@@ -43,17 +48,26 @@ def fetch_tab_by_title(title):
         )
         window_title = result.stdout.strip()
 
-        if title in window_title:
-            tab_count += 1
-
+        # Check for duplicate tabs
         if window_title in tab_checked:
             break
 
         tab_checked.add(window_title)
+
+        # Count the tab if the title matches
+        if title in window_title:
+            tab_count += 1
+
+        # Switch to the next tab
         pyautogui.hotkey('ctrl', 'tab')
         time.sleep(0.5)
 
     return tab_count
 
 if __name__ == "__main__":
-    print(f"Number of tabs with 'Google' in the title: {fetch_tab_by_title('Google')}")
+    title_keyword = "Google"
+    try:
+        count = fetch_tab_count_by_title(title_keyword)
+        print(f"Number of tabs with '{title_keyword}' in the title: {count}")
+    except RuntimeError as e:
+        print(f"Error: {e}")
